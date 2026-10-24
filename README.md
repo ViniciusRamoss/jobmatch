@@ -1,4 +1,4 @@
-# jobmath
+# jobmatch
 
 Ranks job postings by fit with your résumé and explains each score: strengths, gaps, and why.
 
@@ -11,7 +11,7 @@ Requires [uv](https://docs.astral.sh/uv/).
 ```bash
 uv sync                  # create .venv and install pinned dependencies
 cp .env.example .env     # adjust as needed
-uv run jobmath --help
+uv run jobmatch --help
 ```
 
 Checks (same as CI):

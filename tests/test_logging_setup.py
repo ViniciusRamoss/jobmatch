@@ -3,7 +3,7 @@ from collections.abc import Iterator
 
 import pytest
 
-from jobmath.logging_setup import LOGGER_NAME, configure_logging
+from jobmatch.logging_setup import LOGGER_NAME, configure_logging
 
 
 @pytest.fixture(autouse=True)

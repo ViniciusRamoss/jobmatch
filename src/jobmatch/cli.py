@@ -6,9 +6,9 @@ from typing import Annotated
 import typer
 from pydantic import ValidationError
 
-from jobmath import __version__
-from jobmath.logging_setup import configure_logging
-from jobmath.settings import get_settings
+from jobmatch import __version__
+from jobmatch.logging_setup import configure_logging
+from jobmatch.settings import get_settings
 
 logger = logging.getLogger(__name__)
 

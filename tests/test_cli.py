@@ -1,8 +1,8 @@
 import pytest
 from typer.testing import CliRunner
 
-from jobmath import __version__
-from jobmath.cli import app
+from jobmatch import __version__
+from jobmatch.cli import app
 
 runner = CliRunner()
 
@@ -21,7 +21,7 @@ def test_verbose_flag_is_accepted() -> None:
 
 
 def test_invalid_settings_exit_with_code_2(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setenv("JOBMATH_LOG_LEVEL", "LOUD")
+    monkeypatch.setenv("JOBMATCH_LOG_LEVEL", "LOUD")
 
     result = runner.invoke(app, ["version"])
 

@@ -1,10 +1,10 @@
-"""Logging configuration for the ``jobmath`` logger hierarchy."""
+"""Logging configuration for the ``jobmatch`` logger hierarchy."""
 
 import logging
 import sys
 
-LOGGER_NAME = "jobmath"
-_HANDLER_NAME = "jobmath-stderr"
+LOGGER_NAME = "jobmatch"
+_HANDLER_NAME = "jobmatch-stderr"
 _FORMAT = "%(asctime)s %(levelname)-8s %(name)s: %(message)s"
 
 

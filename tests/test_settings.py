@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 from pydantic import ValidationError
 
-from jobmath.settings import Settings
+from jobmatch.settings import Settings
 
 
 def test_defaults() -> None:
@@ -14,8 +14,8 @@ def test_defaults() -> None:
 
 
 def test_reads_environment(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setenv("JOBMATH_LOG_LEVEL", "debug")
-    monkeypatch.setenv("JOBMATH_CONFIG_PATH", "other.yaml")
+    monkeypatch.setenv("JOBMATCH_LOG_LEVEL", "debug")
+    monkeypatch.setenv("JOBMATCH_CONFIG_PATH", "other.yaml")
 
     settings = Settings()
 
@@ -24,13 +24,13 @@ def test_reads_environment(monkeypatch: pytest.MonkeyPatch) -> None:
 
 
 def test_reads_dotenv_file(tmp_path: Path) -> None:
-    (tmp_path / ".env").write_text("JOBMATH_LOG_LEVEL=WARNING\n", encoding="utf-8")
+    (tmp_path / ".env").write_text("JOBMATCH_LOG_LEVEL=WARNING\n", encoding="utf-8")
 
     assert Settings().log_level == "WARNING"
 
 
 def test_rejects_invalid_level(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setenv("JOBMATH_LOG_LEVEL", "LOUD")
+    monkeypatch.setenv("JOBMATCH_LOG_LEVEL", "LOUD")
 
     with pytest.raises(ValidationError):
         Settings()

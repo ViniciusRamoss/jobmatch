@@ -15,7 +15,7 @@ LogLevel = Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_prefix="JOBMATH_",
+        env_prefix="JOBMATCH_",
         env_file=".env",
         env_file_encoding="utf-8",
         extra="ignore",
